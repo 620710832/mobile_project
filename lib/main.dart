@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'package:mobile_project/LoginpageAdd-On/mainpage.dart';
+import 'Doglist/doglist.dart';
 import 'LoginpageAdd-On/Loginscreen.dart';
-import 'LoginpageAdd-On/Lostpassword.dart';
+import 'LoginpageAdd-On/showdetail.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +20,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Loginscreen(),
+      initialRoute: '/home',
+      routes: {
+    Loginscreen.page : (context) => Loginscreen(),
+        mainpage.page : (context) => mainpage(),
+        Doglist.page : (context) => Doglist(),
+        Showdetail.page : (context) => Showdetail(),
+        Doglist.page : (context) => Doglist(),
+      },
     );
   }
 }
